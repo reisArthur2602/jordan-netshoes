@@ -1,13 +1,15 @@
+import CardList from "./components/Card/CardList";
 import Container from "./components/Container";
 import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
+import { JORDAN } from "./contants/jordan";
 
 const App = () => {
   return (
     <>
       <Header />
       <HeroSection />
-      <Container classname="flex flex-col gap-10 md:gap-[4.5rem] py-14 md:px-20">
+      <Container classname="flex flex-col gap-10 md:gap-[4.5rem] py-14 md:py-20">
         <div className="w-full max-w-[37.0625rem] space-y-3 self-center text-center md:space-y-6">
           <h2 className="text-xl font-semibold sm:text-2xl md:text-[2rem]">
             Os melhores em só lugar
@@ -17,6 +19,7 @@ const App = () => {
             sneakers que buscam estilo e conforto.
           </p>
         </div>
+        <CardList data={JORDAN}/>
       </Container>
     </>
   );
